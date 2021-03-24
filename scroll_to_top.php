@@ -8,9 +8,10 @@ Author URI: https://www.cupocode.com
 */
 add_action( 'wp_footer', 'back_to_top' );
 function back_to_top(){
-?>
-<style>
-    .to_top {
+  ?>
+	<style>
+	
+	.to_top {
       position: fixed;
       bottom: 30px;
       right: 30px;
@@ -32,9 +33,10 @@ function back_to_top(){
     
     .to_top-show {
       display: block;
-    }		
-</style>
-<script>
+    }
+		
+	</style>
+  <script>
   document.querySelector("footer").innerHTML =
     "<a class='to_top' onclick='toTop();'>&#x25B2;</a>";
   
@@ -62,4 +64,7 @@ function back_to_top(){
     window.addEventListener("scroll", trackScroll);
     toTop.addEventListener("click", toTop);
   })();
-</script>
+  </script>
+  <?php
+}
+?>
